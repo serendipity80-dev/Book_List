@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css"
+        integrity="sha512-EZLkOqwILORob+p0BXZc+Vm3RgJBOe1Iq/0fiI7r/wJgzOFZMlsqTa29UEl6v6U6gsV4uIpsNZoV32YZqrCRCQ=="
+        crossorigin="anonymous" />
+
+    <title>Book List</title>
+    <style>
+        body {
+            box-sizing: border-box;
+            background-image: url('02.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            color: rgb(241, 153, 11);
+            text-shadow: 0 2px 3px rgb(90, 70, 2);
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        input::placeholder {
+            font-style: italic;
+        }
+
+        .validate,
+        .error {
+            color: #eee;
+            padding: 5px;
+            margin: 5px 0 15px 0;
+        }
+
+        .validate {
+            background-color: green;
+        }
+
+        .error {
+            background-color: red;
+        }
+
+        a {
+            text-decoration: none;
+        }
+        .delete{
+            color: black;
+        }
+        #book-list{
+            color: black;
+            text-shadow: 0 0 5px #333;
+        }
+        #btn{
+            color: rgb(241, 153, 11);
+            text-shadow: 0 2px 3px rgb(143, 118, 38);;
+            font-size: 2rem;
+
+            
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Add Book</h1>
+        <form id="form-book">
+            <div class="shade"></div>
+            <div>
+                <label for="title">Title</label>
+                <input type="text" id="title" class="u-full-width" placeholder="Please, Enter Book Title">
+            </div>
+            <div>
+                <label for="author">Author</label>
+                <input type="text" id="author" class="u-full-width" placeholder="Please, Enter Author">
+            </div>
+            <div>
+                <label for="isbn">ISBN#</label>
+                <input type="text" id="isbn" class="u-full-width" placeholder="Please, Enter ISBN">
+            </div>
+        </form>
+        <div>
+            <input type="submit" value="Submit" class="u-full-width"id="btn" >
+
+        </div>
+
+
+
+
+        <table class="u-full-width">
+
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Author</th>
+                    <th>ISBN</th>
+                </tr>
+            </thead>
+            <tbody id="book-list"></tbody>
+
+        </table>
+
+
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>
